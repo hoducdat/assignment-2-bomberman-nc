@@ -12,7 +12,7 @@ public abstract class LevelLoader {
 	protected int _level;
 	protected Board _board;
 
-	public LevelLoader(Board board, int level) throws LoadLevelException {
+	public LevelLoader(Board board, int level) throws LoadLevelException, FileNotFoundException {
 		_board = board;
 		loadLevel(level);
 	}
