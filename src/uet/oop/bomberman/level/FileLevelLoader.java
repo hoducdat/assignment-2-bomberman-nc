@@ -12,11 +12,9 @@ import uet.oop.bomberman.exceptions.LoadLevelException;
 import uet.oop.bomberman.graphics.Screen;
 import uet.oop.bomberman.graphics.Sprite;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.SimpleTimeZone;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class FileLevelLoader extends LevelLoader {
 
@@ -26,42 +24,25 @@ public class FileLevelLoader extends LevelLoader {
 	 */
 	private static char[][] _map;
 	
-	public FileLevelLoader(Board board, int level) throws LoadLevelException {
+	public FileLevelLoader(Board board, int level) throws LoadLevelException, FileNotFoundException {
 		super(board, level);
 	}
 	
 	@Override
 	public void loadLevel(int level) {
 		// TODO: đọc dữ liệu từ tệp cấu hình /levels/Level{level}.txt
-		// TODO: cập nhật các giá trị đọc được vào _width, _height, _level, _map
-		try {
-			File inputFile = new File("/Users/lebacong/Projects/boomberman/res/levels/Level1.txt");
-			FileReader fileReader = new FileReader(inputFile);
-			BufferedReader bufferedReader = new BufferedReader(fileReader);
-			String s = bufferedReader.readLine();
-			int l, r, c;
-			String a[] = s.split(" ");
-			l = Integer.parseInt(a[0]);
-			r = Integer.parseInt(a[1]);
-			c = Integer.parseInt(a[2]);
-			super.set_height(r);
-			super.set_level(l);
-			super.set_width(c);
-			_map = new char[r][c];
-			for (int i=0; i<r; i++) {
-				s = bufferedReader.readLine();
-				for (int j = 0; j<c; j++) {
-					_map[i][j] = s.charAt(j);
-					System.out.print(_map[i][j]);
-				}
-				System.out.println();
-			}
-		}
-		catch (IOException e) {
-			e.printStackTrace();
-			System.exit(0);
-		}
-
+        try {
+            Scanner reader = new Scanner(new File("levels/Level1.txt"));
+            _level = reader.nextInt();
+            _height = reader.nextInt();
+            _width = reader.nextInt();
+            for (int i = 0; i < _height; i++) {
+                _map[i] = reader.nextLine().toCharArray();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        // TODO: cập nhật các giá trị đọc được vào _width, _height, _level, _map
 	}
 
 	@Override
@@ -71,83 +52,70 @@ public class FileLevelLoader extends LevelLoader {
 
 		// TODO: phần code mẫu ở dưới để hướng dẫn cách thêm các loại Entity vào game
 		// TODO: hãy xóa nó khi hoàn thành chức năng load màn chơi từ tệp cấu hình
-		// thêm Wall
-		for (int x = 0; x < super.getWidth(); x++) {
-			for (int y = 0; y < super.getHeight(); y++) {
-				int pos = x + y * _width;
-				Sprite sprite;
-				switch (_map[y][x]) {
-					case '#': {
-						sprite = Sprite.wall;
-						break;
-					}
-					case ' ': {
-						sprite = Sprite.grass;
-						break;
-					}
-					case 'p': {
-						sprite = Sprite.player_down;
-						break;
-					}
-					case 'f': {
-						sprite = Sprite.powerup_flames;
-						break;
-					}
-					case 's': {
-						sprite = Sprite.powerup_speed;
-						break;
-					}
-					case 'b': {
-						sprite = Sprite.powerup_bombs;
-						break;
-					}
-					case 'x': {
-						sprite = Sprite.portal;
-						break;
-					}
-				}
+		for (int x = 0; x < _height; x++) {
+			for (int y = 0; y < _width; y++) {
+			    switch (_map[x][y]) {
+                    case '#':
+                        addWall(x, y);
+                        break;
+                    case 'p':
+                        addBomber(x, y);
+                        break;
+                    case '1':
+                        addBalloon(x, y);
+                        break;
+                    case '*':
+                        addBrick(x, y);
+                        break;
+                    case 'f':
+                        addIteam(x, y);
+                        break;
+                    default:
+                        addGrass(x, y);
+                        break;
+                }
 			}
-		}
-
-		/*
-		for (int x = 0; x < 20; x++) {
-			for (int y = 0; y < 20; y++) {
-				int pos = x + y * _width;
-				Sprite sprite = y == 0 || x == 0 || x == 10 || y == 10 ? Sprite.wall : Sprite.grass;
-				_board.addEntity(pos, new Grass(x, y, sprite));
-			}
-		}
-
-		// thêm Bomber
-		int xBomber = 1, yBomber = 1;
-		_board.addCharacter( new Bomber(Coordinates.tileToPixel(xBomber), Coordinates.tileToPixel(yBomber) + Game.TILES_SIZE, _board) );
-		Screen.setOffset(0, 0);
-		_board.addEntity(xBomber + yBomber * _width, new Grass(xBomber, yBomber, Sprite.grass));
-
-		// thêm Enemy
-		int xE = 2, yE = 1;
-		_board.addCharacter( new Balloon(Coordinates.tileToPixel(xE), Coordinates.tileToPixel(yE) + Game.TILES_SIZE, _board));
-		_board.addEntity(xE + yE * _width, new Grass(xE, yE, Sprite.grass));
-
-		// thêm Brick
-		int xB = 3, yB = 1;
-		_board.addEntity(xB + yB * _width,
-				new LayeredEntity(xB, yB,
-					new Grass(xB, yB, Sprite.grass),
-					new Brick(xB, yB, Sprite.brick)
-				)
-		);
-
-		// thêm Item kèm Brick che phủ ở trên
-		int xI = 1, yI = 2;
-		_board.addEntity(xI + yI * _width,
-				new LayeredEntity(xI, yI,
-					new Grass(xI ,yI, Sprite.grass),
-					new SpeedItem(xI, yI, Sprite.powerup_flames),
-					new Brick(xI, yI, Sprite.brick)
-				)
-		);
-		*/
+        }
 	}
+
+    private void addIteam(int xI, int yI) {
+        _board.addEntity(xI + yI * _width,
+                new LayeredEntity(xI, yI,
+                        new Grass(xI ,yI, Sprite.grass),
+                        new SpeedItem(xI, yI, Sprite.powerup_flames),
+                        new Brick(xI, yI, Sprite.brick)
+                )
+        );
+    }
+
+    private void addGrass(int x, int y) {
+        int pos = x + y * _width;
+        _board.addEntity(pos, new Grass(x, y, Sprite.grass));
+    }
+
+    private void addWall(int x, int y) {
+        int pos = x + y * _width;
+        _board.addEntity(pos, new Grass(x, y, Sprite.wall));
+    }
+
+    private void addBomber(int xBomber, int yBomber) {
+        _board.addCharacter( new Bomber(Coordinates.tileToPixel(xBomber), Coordinates.tileToPixel(yBomber) + Game.TILES_SIZE, _board) );
+        Screen.setOffset(0, 0);
+        _board.addEntity(xBomber + yBomber * _width, new Grass(xBomber, yBomber, Sprite.grass));
+    }
+
+    private void addBalloon(int xE, int yE) {
+        _board.addCharacter( new Balloon(Coordinates.tileToPixel(xE), Coordinates.tileToPixel(yE) + Game.TILES_SIZE, _board));
+        _board.addEntity(xE + yE * _width, new Grass(xE, yE, Sprite.grass));
+    }
+
+    private void addBrick(int xB, int yB) {
+        _board.addEntity(xB + yB * _width,
+                new LayeredEntity(xB, yB,
+                        new Grass(xB, yB, Sprite.grass),
+                        new Brick(xB, yB, Sprite.brick)
+                )
+        );
+    }
 
 }
