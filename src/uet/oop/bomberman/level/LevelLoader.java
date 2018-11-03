@@ -3,6 +3,8 @@ package uet.oop.bomberman.level;
 import uet.oop.bomberman.Board;
 import uet.oop.bomberman.exceptions.LoadLevelException;
 
+import java.io.FileNotFoundException;
+
 /**
  * Load và lưu trữ thông tin bản đồ các màn chơi
  */

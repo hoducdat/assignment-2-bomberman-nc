@@ -32,10 +32,11 @@ public class FileLevelLoader extends LevelLoader {
 	public void loadLevel(int level) {
 		// TODO: đọc dữ liệu từ tệp cấu hình /levels/Level{level}.txt
         try {
-            Scanner reader = new Scanner(new File("levels/Level1.txt"));
+            Scanner reader = new Scanner(new File("res/levels/Level1.txt"));
             _level = reader.nextInt();
-            _height = reader.nextInt();
+            _height = reader.nextInt() +1;
             _width = reader.nextInt();
+            _map = new char[_height][_width];
             for (int i = 0; i < _height; i++) {
                 _map[i] = reader.nextLine().toCharArray();
             }
@@ -52,9 +53,10 @@ public class FileLevelLoader extends LevelLoader {
 
 		// TODO: phần code mẫu ở dưới để hướng dẫn cách thêm các loại Entity vào game
 		// TODO: hãy xóa nó khi hoàn thành chức năng load màn chơi từ tệp cấu hình
-		for (int x = 0; x < _height; x++) {
-			for (int y = 0; y < _width; y++) {
-			    switch (_map[x][y]) {
+		for (int x = 0; x < _width; x++) {
+			for (int y = 1; y < _height; y++) {
+                System.out.println(x + " " + y);
+			    switch (_map[y][x]) {
                     case '#':
                         addWall(x, y);
                         break;

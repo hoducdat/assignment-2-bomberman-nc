@@ -14,6 +14,7 @@ import uet.oop.bomberman.level.FileLevelLoader;
 import uet.oop.bomberman.level.LevelLoader;
 
 import java.awt.*;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -102,6 +103,8 @@ public class Board implements IRender {
 			_levelLoader.createEntities();
 		} catch (LoadLevelException e) {
 			endGame();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
 		}
 	}
 	
