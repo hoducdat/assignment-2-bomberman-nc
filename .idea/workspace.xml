@@ -1,20 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff6ec97a-5947-4f8f-bdf7-1cc361dddca4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="ff6ec97a-5947-4f8f-bdf7-1cc361dddca4" name="Default Changelist" comment="Fix xong bug load bản đồ.">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boomberman.iml" beforeDir="false" afterPath="$PROJECT_DIR$/boomberman.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uet/oop/bomberman/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/uet/oop/bomberman/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/demo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/levels/Level1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/balloom_dead.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/balloom_left1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/balloom_left2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/balloom_left3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/balloom_right1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/balloom_right2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/balloom_right3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/bomb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/bomb_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/bomb_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/bomb_exploded.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/bomb_exploded1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/bomb_exploded2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/brick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/brick_exploded.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/brick_exploded1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/brick_exploded2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/doll_dead.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/doll_left1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/doll_left2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/doll_left3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/doll_right1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/doll_right2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/doll_right3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/explosion_horizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/explosion_horizontal1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/explosion_horizontal2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/explosion_horizontal_left_last.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/explosion_horizontal_left_last1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/explosion_horizontal_left_last2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/explosion_horizontal_right_last.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/explosion_horizontal_right_last1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/explosion_horizontal_right_last2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/explosion_vertical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/explosion_vertical1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/explosion_vertical2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/explosion_vertical_down_last.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/explosion_vertical_down_last1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/explosion_vertical_down_last2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/explosion_vertical_top_last.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/explosion_vertical_top_last1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/explosion_vertical_top_last2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/grass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/kondoria_dead.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/kondoria_left1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/kondoria_left2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/kondoria_left3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/kondoria_right1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/kondoria_right2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/kondoria_right3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/minvo_dead.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/minvo_left1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/minvo_left2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/minvo_left3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/minvo_right1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/minvo_right2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/minvo_right3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/mob_dead1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/mob_dead2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/mob_dead3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/oneal_dead.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/oneal_left1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/oneal_left2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/oneal_left3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/oneal_right1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/oneal_right2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/oneal_right3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/player_dead1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/player_dead2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/player_dead3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/player_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/player_down_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/player_down_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/player_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/player_left_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/player_left_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/player_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/player_right_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/player_right_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/player_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/player_up_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/player_up_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/portal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/powerup_bombpass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/powerup_bombs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/powerup_detonator.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/powerup_flamepass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/powerup_flames.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/powerup_speed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/powerup_wallpass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/sprites/wall.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/textures/classic.pdn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/textures/classic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/Board.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/BombermanGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/AnimatedEntitiy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/Entity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/LayeredEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/bomb/Bomb.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/bomb/Flame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/bomb/FlameSegment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/character/Bomber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/character/Character.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/character/enemy/Balloon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/character/enemy/Enemy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/character/enemy/Oneal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/character/enemy/ai/AI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/character/enemy/ai/AILow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/character/enemy/ai/AIMedium.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/tile/Grass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/tile/Portal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/tile/Tile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/tile/Wall.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/tile/destroyable/Brick.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/tile/destroyable/DestroyableTile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/tile/item/BombItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/tile/item/FlameItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/tile/item/Item.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/entities/tile/item/SpeedItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/exceptions/GameException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/exceptions/LoadLevelException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/graphics/IRender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/graphics/Screen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/graphics/Sprite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/graphics/SpriteSheet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/gui/Frame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/gui/GamePanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/gui/InfoPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/input/Keyboard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/level/Coordinates.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/level/FileLevelLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/boomberman/uet/oop/bomberman/level/LevelLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/boomberman/uet/oop/bomberman/graphics/SpriteTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/uet/oop/bomberman/level/FileLevelLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/uet/oop/bomberman/level/FileLevelLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uet/oop/bomberman/level/LevelLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/uet/oop/bomberman/level/LevelLoader.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,23 +187,46 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1282293146">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="197" />
+          <entry key="txt" value="34" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="197" />
+          <entry key="PLAIN_TEXT" value="34" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1300">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileLevelLoader.java" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/level/FileLevelLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+            <state relative-caret-position="162">
+              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,53 +234,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LevelLoader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/level/LevelLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="16" column="78" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/Board.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-59">
-              <caret line="106" column="12" selection-start-line="106" selection-start-column="12" selection-end-line="106" selection-end-column="32" />
-              <folding>
-                <element signature="e#5115#5116#0" expanded="true" />
-                <element signature="e#5140#5141#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sprite.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/graphics/Sprite.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Level1.txt" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/levels/Level1.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="20">
+              <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpriteSheet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/graphics/SpriteSheet.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+            <state relative-caret-position="562">
+              <caret line="228" selection-start-line="228" selection-end-line="228" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#5169#5170#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -180,6 +303,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -216,17 +341,10 @@
               <item name="bomberman" type="462c0819:PsiDirectoryNode" />
               <item name="level" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="assignment-2-bomberman-nc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -235,7 +353,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540444573776" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541339170805" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -244,7 +362,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -276,6 +394,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="SpriteTest.getSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="boomberman" />
@@ -285,20 +406,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="uet.oop.bomberman.graphics" />
       <option name="MAIN_CLASS_NAME" value="uet.oop.bomberman.graphics.SpriteTest" />
       <option name="METHOD_NAME" value="getSize" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
       <item itemvalue="Application.BombermanGame" />
@@ -344,37 +460,37 @@
     <option name="totallyTimeSpent" value="6652000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49848714" weight="0.32792208" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.32792208" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.32792208" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32907802" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25416037" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26172465" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.32786885" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5015129" side_tool="true" visible="true" weight="0.32786885" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49848714" weight="0.32792208" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,45 +503,10 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/bomberman-starter" />
     </ignored-roots>
+    <MESSAGE value="Fix xong bug load bản đồ." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix xong bug load bản đồ." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1300">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/graphics/Sprite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/levels/Level1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/graphics/SpriteSheet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/level/FileLevelLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/BombermanGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -464,16 +545,6 @@
       </provider>
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/System.java" />
-    <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/graphics/SpriteSheet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/entities/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -488,49 +559,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/graphics/Sprite.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/Scanner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1300">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="128">
+          <caret line="861" selection-start-line="861" selection-end-line="861" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/level/LevelLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="221">
           <caret line="16" column="78" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/Board.java">
+    <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-59">
-          <caret line="106" column="12" selection-start-line="106" selection-start-column="12" selection-end-line="106" selection-end-column="32" />
+        <state relative-caret-position="322">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/graphics/Sprite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/graphics/SpriteSheet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
           <folding>
-            <element signature="e#5115#5116#0" expanded="true" />
-            <element signature="e#5140#5141#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/levels/Level1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="20">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="228" selection-start-line="228" selection-end-line="228" />
+          <folding>
+            <element signature="e#5169#5170#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/uet/oop/bomberman/level/FileLevelLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        <state relative-caret-position="162">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -595,6 +682,18 @@
               <list>
                 <option value="0.2" />
                 <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>

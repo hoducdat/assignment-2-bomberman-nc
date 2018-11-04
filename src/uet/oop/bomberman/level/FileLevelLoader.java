@@ -34,11 +34,14 @@ public class FileLevelLoader extends LevelLoader {
         try {
             Scanner reader = new Scanner(new File("res/levels/Level1.txt"));
             _level = reader.nextInt();
-            _height = reader.nextInt() +1;
+            _height = reader.nextInt();
             _width = reader.nextInt();
+            System.out.println(reader.nextLine().length());
             _map = new char[_height][_width];
             for (int i = 0; i < _height; i++) {
-                _map[i] = reader.nextLine().toCharArray();
+                System.out.println(i);
+                _map[i] = reader.nextLine().substring(0, _width).toCharArray();
+                System.out.println(_map[i]);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -54,8 +57,7 @@ public class FileLevelLoader extends LevelLoader {
 		// TODO: phần code mẫu ở dưới để hướng dẫn cách thêm các loại Entity vào game
 		// TODO: hãy xóa nó khi hoàn thành chức năng load màn chơi từ tệp cấu hình
 		for (int x = 0; x < _width; x++) {
-			for (int y = 1; y < _height; y++) {
-                System.out.println(x + " " + y);
+			for (int y = 0; y < _height; y++) {
 			    switch (_map[y][x]) {
                     case '#':
                         addWall(x, y);
