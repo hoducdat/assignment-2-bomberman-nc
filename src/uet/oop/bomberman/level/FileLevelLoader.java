@@ -39,9 +39,7 @@ public class FileLevelLoader extends LevelLoader {
             System.out.println(reader.nextLine().length());
             _map = new char[_height][_width];
             for (int i = 0; i < _height; i++) {
-                System.out.println(i);
                 _map[i] = reader.nextLine().substring(0, _width).toCharArray();
-                System.out.println(_map[i]);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();

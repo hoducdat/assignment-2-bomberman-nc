@@ -7,6 +7,7 @@ import uet.oop.bomberman.entities.bomb.Bomb;
 import uet.oop.bomberman.graphics.Screen;
 import uet.oop.bomberman.graphics.Sprite;
 import uet.oop.bomberman.input.Keyboard;
+import uet.oop.bomberman.level.Coordinates;
 
 import java.util.Iterator;
 import java.util.List;
@@ -118,7 +119,7 @@ public class Bomber extends Character {
         if (_input.right) xa++;
 
         if (xa != 0 || ya != 0) {
-            move(xa * Game.getBomberSpeed(), ya);
+            move(xa * Game.getBomberSpeed(), ya * Game.getBomberSpeed());
             _moving = true;
         } else {
             _moving = false;
@@ -133,7 +134,7 @@ public class Bomber extends Character {
         for (int i = 0; i < 4; i++) {
             xt += i / 2 * 11;
             yt += i % 2 * 12;
-            Entity entity = _board.getEntity(xt, yt, this);
+            Entity entity = _board.getEntity(Coordinates.pixelToTile(xt), Coordinates.pixelToTile(yt), this);
             if (entity.collide(this)) {
                 return  false;
             }
@@ -152,7 +153,6 @@ public class Bomber extends Character {
         if (canMove(0, ya)) {
             _y += ya;
         }
-
         if (ya < 0) _direction = 0;
         if (xa > 0) _direction = 1;
         if (ya > 0) _direction = 2;
