@@ -6,6 +6,7 @@ import uet.oop.bomberman.entities.LayeredEntity;
 import uet.oop.bomberman.entities.character.Bomber;
 import uet.oop.bomberman.entities.character.enemy.Balloon;
 import uet.oop.bomberman.entities.tile.Grass;
+import uet.oop.bomberman.entities.tile.Wall;
 import uet.oop.bomberman.entities.tile.destroyable.Brick;
 import uet.oop.bomberman.entities.tile.item.SpeedItem;
 import uet.oop.bomberman.exceptions.LoadLevelException;
@@ -97,7 +98,7 @@ public class FileLevelLoader extends LevelLoader {
 
     private void addWall(int x, int y) {
         int pos = x + y * _width;
-        _board.addEntity(pos, new Grass(x, y, Sprite.wall));
+        _board.addEntity(pos, new Wall(x, y, Sprite.wall));
     }
 
     private void addBomber(int xBomber, int yBomber) {
