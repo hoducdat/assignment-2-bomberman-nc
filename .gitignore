@@ -2,8 +2,6 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 
-target/
-
 
 # User-specific stuff
 .idea/**/workspace.xml
@@ -47,6 +45,7 @@ cmake-build-*/
 
 # IntelliJ
 out/
+target/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
