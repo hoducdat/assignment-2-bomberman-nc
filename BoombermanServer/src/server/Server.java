@@ -1,6 +1,6 @@
 package server;
 
-import java.net.*
+import java.net.*;
 
 public class Server {
 
@@ -13,13 +13,22 @@ public class Server {
 
     public Server(int portNumber) {
         this.portNumber = portNumber;
-        serverSocket = new ServerSocket(portNumber);
+        try {
+            serverSocket = new ServerSocket(portNumber);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void run() {
         while (true) {
-            Socket socket = serverSocket.accept();
-
+            try {
+                Socket socket = serverSocket.accept();
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
             // handle receive
             // handle new room
             // handle come in room
