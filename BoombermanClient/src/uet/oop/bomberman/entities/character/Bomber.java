@@ -119,7 +119,6 @@ public class Bomber extends Character {
         if (_input.up) ya--;
         if (_input.left) xa--;
         if (_input.right) xa++;
-
         if (xa != 0 || ya != 0) {
             move(xa * Game.getBomberSpeed(), ya * Game.getBomberSpeed());
             _moving = true;
@@ -131,16 +130,16 @@ public class Bomber extends Character {
     @Override
     public boolean canMove(double x, double y) {
         // TODO: kiểm tra có đối tượng tại vị trí chuẩn bị di chuyển đến và có thể di chuyển tới đó hay không
-        Double xt = _x + x;
-        Double yt = _y + y;
-        for (int i = 0; i < 4; i++) {
-            xt += i / 2 * 11;
-            yt += i % 2 * 12;
-            Entity entity = _board.getEntity(Coordinates.pixelToTile(xt), Coordinates.pixelToTile(yt), this);
-            if (entity.collide(this)) {
-                return  false;
+        for (int c = 0; c < 4; c++) {
+            double xt = Coordinates.pixelToTile((_x + x) + c % 2 * 11);
+            double yt = Coordinates.pixelToTile((_y + y - 1) - c / 2 * 15);
+            Entity a = _board.getEntity(xt, yt, this);
+
+            if (!a.collide(this)) {
+                return false;
             }
         }
+
         return true;
     }
 
@@ -172,7 +171,7 @@ public class Bomber extends Character {
 
         if (e instanceof Enemy) {
             kill();
-            return false;
+            return true;
         }
 
         return true;
