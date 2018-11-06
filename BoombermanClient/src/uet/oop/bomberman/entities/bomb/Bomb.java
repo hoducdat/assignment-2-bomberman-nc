@@ -1,10 +1,15 @@
 package uet.oop.bomberman.entities.bomb;
 
 import uet.oop.bomberman.Board;
+import uet.oop.bomberman.Game;
 import uet.oop.bomberman.entities.AnimatedEntitiy;
 import uet.oop.bomberman.entities.Entity;
+import uet.oop.bomberman.entities.character.Bomber;
+import uet.oop.bomberman.entities.character.Character;
+import uet.oop.bomberman.entities.tile.Tile;
 import uet.oop.bomberman.graphics.Screen;
 import uet.oop.bomberman.graphics.Sprite;
+import uet.oop.bomberman.level.Coordinates;
 
 public class Bomb extends AnimatedEntitiy {
 
@@ -25,7 +30,7 @@ public class Bomb extends AnimatedEntitiy {
 	
 	@Override
 	public void update() {
-		if(_timeToExplode > 0) 
+		if(_timeToExplode > 0)
 			_timeToExplode--;
 		else {
 			if(!_exploded) 
@@ -73,10 +78,20 @@ public class Bomb extends AnimatedEntitiy {
      */
 	protected void explode() {
 		_exploded = true;
+		_allowedToPassThru = true;
 		
 		// TODO: xử lý khi Character đứng tại vị trí Bomb
+		Character character = _board.getCharacterAtExcluding((int)_x, (int)_y, null);
+		if (character != null) {
+			character.kill();
+		}
 		
 		// TODO: tạo các Flame
+		_flames = new Flame[4];
+
+		for (int i = 0; i < _flames.length; i++) {
+			_flames[i] = new Flame((int) _x, (int) _y, i, Game.getBombRadius(), _board);
+		}
 	}
 	
 	public FlameSegment flameAt(int x, int y) {
@@ -94,11 +109,21 @@ public class Bomb extends AnimatedEntitiy {
 	@Override
 	public boolean collide(Entity e) {
         // TODO: xử lý khi Bomber đi ra sau khi vừa đặt bom (_allowedToPassThru)
+		if (e instanceof Bomber) {
+			double xbomber = e.getX();
+			double ybomber = e.getY();
+			double xbomb = Coordinates.tileToPixel(getY());
+			double ybomb = Coordinates.tileToPixel(getY());
+			if ((xbomber + 10 < xbomb) || (xbomber - 16 >= xbomb) || (ybomber - 28 > ybomb) || (ybomber - 1 < ybomb)) {
+				_allowedToPassThru = false;
+			}
+			return _allowedToPassThru;
+		}
         // TODO: xử lý va chạm với Flame của Bomb khác
-	if (e instanceof Flame) {
-	    explode();
-	    return true;
-	}
-        return false;
+		if (e instanceof Flame) {
+			_timeToExplode = 0;
+			return true;
+		}
+		return false;
 	}
 }
