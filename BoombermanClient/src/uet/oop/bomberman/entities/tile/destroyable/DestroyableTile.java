@@ -37,6 +37,9 @@ public class DestroyableTile extends Tile {
 	@Override
 	public boolean collide(Entity e) {
 		// TODO: xử lý khi va chạm với Flame
+		if (e instanceof Flame) {
+		    destroy();
+		}
 		return false;
 	}
 	
