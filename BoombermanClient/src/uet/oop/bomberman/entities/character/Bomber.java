@@ -76,10 +76,18 @@ public class Bomber extends Character {
         // TODO: _timeBetweenPutBombs dùng để ngăn chặn Bomber đặt 2 Bomb cùng tại 1 vị trí trong 1 khoảng thời gian quá ngắn
         // TODO: nếu 3 điều kiện trên thỏa mãn thì thực hiện đặt bom bằng placeBomb()
         // TODO: sau khi đặt, nhớ giảm số lượng Bomb Rate và reset _timeBetweenPutBombs về 0
+        if (_input.space && _timeBetweenPutBombs < 0 && Game.getBombRate() > 0) {
+            int xx = Coordinates.pixelToTile(_x + 6);
+            int yy = Coordinates.pixelToTile(_y - 9);
+            placeBomb(xx, yy);
+            Game.addBombRate(-1);
+            _timeBetweenPutBombs = 30;
+        }
     }
 
     protected void placeBomb(int x, int y) {
         // TODO: thực hiện tạo đối tượng bom, đặt vào vị trí (x, y)
+        _board.addBomb(new Bomb(x, y, _board));
     }
 
     private void clearBombs() {
