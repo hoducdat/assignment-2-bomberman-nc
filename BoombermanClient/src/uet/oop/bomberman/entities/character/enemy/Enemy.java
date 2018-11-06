@@ -110,19 +110,27 @@ public abstract class Enemy extends Character {
 	@Override
 	public boolean canMove(double x, double y) {
 		// TODO: kiểm tra có đối tượng tại vị trí chuẩn bị di chuyển đến và có thể di chuyển tới đó hay không
-		double xr = _x, yr = _y; //subtract y to get more accurate results
+		double xx = _x, yy = _y;
+        if (_direction == 0) {
 
-		//the thing is, subract 15 to 16 (sprite size), so if we add 1 tile we get the next pixel tile with this
-		//we avoid the shaking inside tiles with the help of steps
-		if(_direction == 0) { yr += _sprite.getSize() -1 ; xr += _sprite.getSize()/2; }
-		if(_direction == 1) {yr += _sprite.getSize()/2; xr += 1;}
-		if(_direction == 2) { xr += _sprite.getSize()/2; yr += 1;}
-		if(_direction == 3) { xr += _sprite.getSize() -1; yr += _sprite.getSize()/2;}
+            yy--;
+        }
+        if (_direction == 1) {
 
-		int xx = Coordinates.pixelToTile(xr) +(int)x;
-		int yy = Coordinates.pixelToTile(yr) +(int)y;
-		Entity a = _board.getEntity(xx, yy, this); //entity of the position we want to go
-		System.out.println(a);
+            yy -= 1;
+        }
+        if (_direction == 2) {
+
+            yy -= 16;
+        }
+        if (_direction == 3) {
+
+            yy -= 1;
+            xx += 15;
+        }
+		int xt = Coordinates.pixelToTile(xx) +(int)x;
+		int yt = Coordinates.pixelToTile(yy) +(int)y;
+		Entity a = _board.getEntity(xt, yt, this);
 		return a.collide(this);
 	}
 
