@@ -81,7 +81,7 @@ public class Bomber extends Character {
             int yy = Coordinates.pixelToTile(_y - 9);
             placeBomb(xx, yy);
             Game.addBombRate(-1);
-            _timeBetweenPutBombs = 30;
+            _timeBetweenPutBombs = 10;
         }
     }
 
@@ -139,8 +139,10 @@ public class Bomber extends Character {
     public boolean canMove(double x, double y) {
         // TODO: kiểm tra có đối tượng tại vị trí chuẩn bị di chuyển đến và có thể di chuyển tới đó hay không
         for (int c = 0; c < 4; c++) {
+//            double xt = Coordinates.pixelToTile((_x + x + 3) + c % 2 * 5);
+//            double yt = Coordinates.pixelToTile((_y + y - 2) - c / 2 * 8);
             double xt = Coordinates.pixelToTile((_x + x) + c % 2 * 11);
-            double yt = Coordinates.pixelToTile((_y + y - 1) - c / 2 * 15);
+            double yt = Coordinates.pixelToTile((_y + y - 1) - c / 2 * 13);
             Entity a = _board.getEntity(xt, yt, this);
 
             if (!a.collide(this)) {
