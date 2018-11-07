@@ -74,7 +74,13 @@ public class FileLevelLoader extends LevelLoader {
                         addBrick(x, y);
                         break;
                     case 'f':
-                        addIteam(x, y);
+                        addFlameIteam(x, y);
+                        break;
+                    case 'b':
+                        addBombIteam(x, y);
+                        break;
+                    case 's':
+                        addSpeedIteam(x, y);
                         break;
                     default:
                         addGrass(x, y);
@@ -84,11 +90,31 @@ public class FileLevelLoader extends LevelLoader {
         }
 	}
 
-    private void addIteam(int xI, int yI) {
+    private void addFlameIteam(int xI, int yI) {
         _board.addEntity(xI + yI * _width,
                 new LayeredEntity(xI, yI,
                         new Grass(xI ,yI, Sprite.grass),
                         new FlameItem(xI, yI, Sprite.powerup_flames),
+                        new Brick(xI, yI, Sprite.brick)
+                )
+        );
+    }
+
+    private void addSpeedIteam(int xI, int yI) {
+        _board.addEntity(xI + yI * _width,
+                new LayeredEntity(xI, yI,
+                        new Grass(xI ,yI, Sprite.grass),
+                        new FlameItem(xI, yI, Sprite.powerup_speed),
+                        new Brick(xI, yI, Sprite.brick)
+                )
+        );
+    }
+
+    private void addBombIteam(int xI, int yI) {
+        _board.addEntity(xI + yI * _width,
+                new LayeredEntity(xI, yI,
+                        new Grass(xI ,yI, Sprite.grass),
+                        new FlameItem(xI, yI, Sprite.powerup_bombs),
                         new Brick(xI, yI, Sprite.brick)
                 )
         );
