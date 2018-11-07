@@ -112,7 +112,7 @@ public class Bomb extends AnimatedEntitiy {
 		if (e instanceof Bomber) {
 			double xbomber = e.getX();
 			double ybomber = e.getY();
-			double xbomb = Coordinates.tileToPixel(getY());
+			double xbomb = Coordinates.tileToPixel(getX());
 			double ybomb = Coordinates.tileToPixel(getY());
 			if ((xbomber + 10 < xbomb) || (xbomber - 16 >= xbomb) || (ybomber - 28 > ybomb) || (ybomber - 1 < ybomb)) {
 				_allowedToPassThru = false;
