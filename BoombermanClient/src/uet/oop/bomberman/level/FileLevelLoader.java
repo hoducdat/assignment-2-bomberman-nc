@@ -6,6 +6,7 @@ import uet.oop.bomberman.entities.LayeredEntity;
 import uet.oop.bomberman.entities.character.Bomber;
 import uet.oop.bomberman.entities.character.enemy.Balloon;
 import uet.oop.bomberman.entities.tile.Grass;
+import uet.oop.bomberman.entities.tile.Portal;
 import uet.oop.bomberman.entities.tile.Wall;
 import uet.oop.bomberman.entities.tile.destroyable.Brick;
 import uet.oop.bomberman.entities.tile.item.BombItem;
@@ -82,6 +83,9 @@ public class FileLevelLoader extends LevelLoader {
                     case 's':
                         addSpeedIteam(x, y);
                         break;
+                    case 'x':
+                        addPortal(x, y);
+                        break;
                     default:
                         addGrass(x, y);
                         break;
@@ -89,6 +93,14 @@ public class FileLevelLoader extends LevelLoader {
 			}
         }
 	}
+
+    private void addPortal(int x, int y) {
+        _board.addEntity(x + y * _width,
+                new LayeredEntity(x, y,
+                        new Grass(x, y, Sprite.grass),
+                        new Portal(x, y, Sprite.portal),
+                        new Brick(x,y,Sprite.brick)));
+    }
 
     private void addFlameIteam(int xI, int yI) {
         _board.addEntity(xI + yI * _width,
